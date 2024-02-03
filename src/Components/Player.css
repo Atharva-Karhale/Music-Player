@@ -1,0 +1,35 @@
+/* audio::-webkit-media-controls-panel {
+/*     background-color: #79a2c9;
+/*     text-decoration-color: aliceblue;
+/*   }
+/* 
+/* audio::-webkit-media-controls-timeline {
+/*     display: -moz-box !important;
+/* }
+/* audio::-webkit-media-controls-timeline {
+/*     background-color: #ffffff;
+/*     height: 4px;
+/*   }  
+
+/* In your App.css or a separate CSS file */
+audio {
+  width: 100%;
+  appearance: none;
+}
+
+/* Hide all controls */
+
+
+/* Show only the seek bar */
+audio::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+/* Optionally, customize the appearance of the seek bar */
+audio::-webkit-media-controls-timeline {
+  display: block !important;
+  background-color: #a9c9e8;
+  height: 4px;
+  border-radius: 20px;
+  margin: 1%;
+}

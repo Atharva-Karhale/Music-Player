@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Tu Hai Kahan Reply Version",
+        "artist": "Aadil Rizvi, Shuddhi",
+        "img_src": "src/Assets/Images/Tu-hai-kahan.jpg",
+        "src": "src/Assets/Songs/TU HAI KAHAN Reply Version Song By Shuddhi Music.mp3"
+    },
+    {
+        "title": "With You",
+        "artist": "AP Dhillon",
+        "img_src": "src/Assets/Images/WithYou.jpg",
+        "src": "src/Assets/Songs/With You.mp3"
+    },
+    {
+    "title": "Dead and Cold",
+    "artist": "SadBoyProfilic",
+    "img_src": "src/Assets/Images/DeadAndCold.jpg",
+    "src": "src/Assets/Songs/Dead And Cold.mp3"
+    },
+    {
+        "title": "Love is a Drug",
+        "artist": "Papithbk",
+        "img_src": "src/Assets/Images/LoveIsADrug.jpg",
+        "src": "src/Assets/Songs/Love_Is_a_Drug[DodoConverter.com].mp3"
+    },
+    {
+        "title": "Perfect",
+        "artist": "Logic",
+        "img_src": "src/Assets/Images/Perfect.png",
+        "src": "src/Assets/Songs/Logic_feat_Lil_Wayne_A_AP_Ferg_-_Perfect_Remix__Connectloaded.com.mp3"
+    },
+    {
+        "title": "Your Eyes",
+        "artist": "Barney Sku, Taqiya Zaman",
+        "img_src": "src/Assets/Images/Your Eyes.png",
+        "src": "src/Assets/Songs/Your-Eyes-Got-My-Heart-Barney-Sku(PagalWorld).mp3"
+    }
+]
