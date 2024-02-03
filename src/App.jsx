@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Player from './Components/Player'
 import songData from './Components/Songs.json';
+import { FaFilePdf, FaGithub, FaLinkedin, FaMousePointer, FaAngleDown } from "react-icons/fa";
+import { IoLogoBehance } from "react-icons/io5";
+import { FaArrowUp } from "react-icons/fa";
 
 
 function App() {
@@ -64,7 +67,17 @@ function App() {
             type='file'
             onChange={addFile}
             />
-            <button type='submit' onClick={handelSubmit} className='bg-[#3381ca] py-1 px-6 rounded-lg font-bold text-white hover:border-4  hover:border-[#002d48] hover:bg-white hover:text-[#002d48] hover:underline'>Submit</button>
+            <button type='submit' onClick={handelSubmit} className='bg-[#3381ca] py-1 px-6 rounded-lg font-bold text-white hover:border-4  hover:border-[#002d48] hover:bg-[#c4dce4] hover:text-[#002d48] hover:underline'>Submit</button>
+          </div>
+          <div>
+          <div className='mt-44 text-center font-bold text-sm'> - SOCIALS - </div>
+            <ul className=' flex text-3xl justify-between p-4 '>
+                <li title='Github' className=' rounded-full border-4 border-[#ffffff] p-2 border-opacity-25 hover:border-[#b5d3e2] '><a href='https://github.com/Atharva-Karhale'><FaGithub className='text-theme1-gray' /></a></li>
+                <li title='LinkedIn' className='rounded-full border-4 border-[#ffffff] p-2 border-opacity-25 hover:border-[#b5d3e2]'><a href='https://www.linkedin.com/in/atharva-karhale/'><FaLinkedin className='text-theme1-gray' /></a></li>
+                <li title='Download CV in PDF format' className='rounded-full border-4 border-[#ffffff] p-2 border-opacity-25 hover:border-[#b5d3e2]'><a href='https://drive.google.com/file/d/1SWpz9SmIiAgliZbgGUqFd-yo9hPrjTxJ/view?usp=sharing'><FaFilePdf  className='text-theme1-gray' /></a></li>
+                <li title='Download CV in PDF format' className='rounded-full border-4 border-[#ffffff] p-2 border-opacity-25 hover:border-[#b5d3e2]'><a href='https://www.behance.net/askmodink'><IoLogoBehance className='text-theme1-gray' /></a></li>
+            </ul>
+            
           </div>
         </div>
       </div>
