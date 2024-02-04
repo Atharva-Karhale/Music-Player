@@ -1,4 +1,3 @@
-// FileUpload.js
 import React, { useState } from 'react';
 
 const FileUpload = ({ onFileUpload }) => {
@@ -11,7 +10,7 @@ const FileUpload = ({ onFileUpload }) => {
   const handleUpload = () => {
     if (selectedFile) {
       onFileUpload(selectedFile);
-      setSelectedFile(null); // Clear selected file after upload
+      setSelectedFile(null); 
     } else {
       alert('Please select a file before uploading.');
     }

@@ -1,13 +1,61 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Player from './Components/Player'
-import songData from './Components/Songs.json';
+//import songData from './Components/Songs.json';
 import { FaFilePdf, FaGithub, FaLinkedin, FaMousePointer, FaAngleDown } from "react-icons/fa";
 import { IoLogoBehance } from "react-icons/io5";
-import { FaArrowUp } from "react-icons/fa";
-
+import one from "./Assets/Images/Tu-hai-kahan.jpg"
+import oneOne from "./Assets/Songs/Tu-Hai-Kahan-reply-version.mp3"
+import two from "./Assets/Images/WithYou.jpg"
+import twoTwo from "./Assets/Songs/With You.mp3"
+import three from "./Assets/Images/DeadAndCold.jpg"
+import threeThree from "./Assets/Songs/Dead And Cold.mp3"
+import four from "./Assets/Images/LoveIsADrug.jpg"
+import fourFour from "./Assets/Songs/Love_Is_a_Drug[DodoConverter.com].mp3"
+import five from "./Assets/Images/Perfect.png"
+import fiveFive from "./Assets/Songs/Logic_feat_Lil_Wayne_A_AP_Ferg_-_Perfect_Remix__Connectloaded.com.mp3"
+import six from "./Assets/Images/Your Eyes.png"
+import sixSix from "./Assets/Songs/Your-Eyes-Got-My-Heart-Barney-Sku(PagalWorld).mp3"
 
 function App() {
+  const [songData] = useState([
+    {
+      "title": "Tu Hai Kahan Reply Version",
+      "artist": "Aadil Rizvi, Shuddhi",
+      "img_src": one,
+      "src": oneOne
+  },
+  {
+      "title": "With You",
+      "artist": "AP Dhillon",
+      "img_src": two,
+      "src": twoTwo
+  },
+  {
+      "title": "Dead and Cold",
+      "artist": "SadBoyProfilic",
+      "img_src": three,
+      "src": threeThree
+  },
+  {
+      "title": "Love is a Drug",
+      "artist": "Papithbk",
+      "img_src": four,
+      "src": fourFour
+  },
+  {
+      "title": "Perfect",
+      "artist": "Logic",
+      "img_src": five,
+      "src": fiveFive
+  },
+  {
+      "title": "Your Eyes",
+      "artist": "Barney Sku, Taqiya Zaman",
+      "img_src": six,
+      "src": sixSix
+  }
+  ])
   const [count, setCount] = useState(0)
   const [songs, setSongs] = useState(songData);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -31,21 +79,21 @@ function App() {
 
   const handelSubmit = () => {
     if (selectedFile) {
-      // Save the file to localStorage
+      
       const fileName = `user_upload_${Date.now()}`;
       localStorage.setItem(fileName, JSON.stringify(selectedFile));
 
-      // Update the playlist with the new song
+      
       const newSong = {
         title: selectedFile.name,
         artist: "User Upload",
-        img_src: "path/to/default/image.jpg", // You can set a default image path
+        img_src: "src/Assets/Images/HD-wallpaper-question-mark-question-mark-pattern-amoled-dark-pure-black-thumbnail (2).jpg", 
         src: URL.createObjectURL(selectedFile),
       };
 
       setSongs((prevSongs) => [...prevSongs, newSong]);
 
-      // Reset the selected file after upload
+      
       setSelectedFile(null);
     } else {
       console.log("No file selected");
@@ -61,13 +109,13 @@ function App() {
           <div className=' cursor-pointer flex justify-center bg-slate-400 border-black border hover:border-white hover:bg-slate-900 hover:text-white border-3 px-8 py-4 ' key={index} onClick={() => {setCurrentSongIndex(index);}}>
             {song.title} - {song.artist}
           </div>))}
-          <div className=' h-[70px] bg-[#b9dce6] pl-2  py-4 border-2 border-[#013858]'>
+          <div className=' h-[70px] bg-[#b9dce6] border-2 border-[#013858]'>
             <input 
-            className=' font-medium'
+            className=' pl-2 py-4 font-medium file:m-1 file:mr-2 file:bg-[#272727] file:rounded file:text-white file:underline '
             type='file'
             onChange={addFile}
             />
-            <button type='submit' onClick={handelSubmit} className='bg-[#3381ca] py-1 px-6 rounded-lg font-bold text-white hover:border-4  hover:border-[#002d48] hover:bg-[#c4dce4] hover:text-[#002d48] hover:underline'>Submit</button>
+            <button type='submit' onClick={handelSubmit} className='bg-[#3381ca]  py-1 px-6 rounded-lg font-bold text-white hover:border-4  hover:border-[#002d48] hover:bg-[#c4dce4] hover:text-[#002d48] hover:underline'>Submit</button>
           </div>
           <div>
           <div className='mt-44 text-center font-bold text-sm'> - SOCIALS - </div>
