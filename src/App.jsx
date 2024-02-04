@@ -16,6 +16,7 @@ import five from "./Assets/Images/Perfect.png"
 import fiveFive from "./Assets/Songs/Logic_feat_Lil_Wayne_A_AP_Ferg_-_Perfect_Remix__Connectloaded.com.mp3"
 import six from "./Assets/Images/Your Eyes.png"
 import sixSix from "./Assets/Songs/Your-Eyes-Got-My-Heart-Barney-Sku(PagalWorld).mp3"
+import placeholder from "./Assets/Images/HD-wallpaper-question-mark-question-mark-pattern-amoled-dark-pure-black-thumbnail (2).jpg"
 
 function App() {
   const [songData] = useState([
@@ -87,7 +88,7 @@ function App() {
       const newSong = {
         title: selectedFile.name,
         artist: "User Upload",
-        img_src: "src/Assets/Images/HD-wallpaper-question-mark-question-mark-pattern-amoled-dark-pure-black-thumbnail (2).jpg", 
+        img_src: placeholder, 
         src: URL.createObjectURL(selectedFile),
       };
 
